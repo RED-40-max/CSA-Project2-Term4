@@ -1,0 +1,43 @@
+/* Program: level 2 
+    + add / unlock some new features, 
+    + diffrent menu, and play round sequence 
+
+ */
+public class Level2 extends initalLevel
+{
+
+    public Level2() //a constructor so that the current level of this class is updated
+    {
+        this.ClassLevel = 2; //changes it to the second level of this class 
+    }
+
+    public void PrintMenu() 
+    {
+        
+        //now it prints out spoon and fork 
+        System.out.println("!!! level now contains 'fork' and 'spoon' !!!"); 
+        System.out.println("'Fork beats: rock, paper \n and Fork is beaten by: rock, spoon "); 
+        System.out.println("Spoon beats: fork, rock \n and Spoon is beaten by: paper, scissors"); 
+        System.out.println(" "); 
+
+        System.out.println("""
+            -----Options-----
+            0 - Rock
+            1 - Paper
+            2 - Scissors
+            3 - Fork
+            4 - Spoon
+            enter play here:
+            """);
+
+    }
+
+
+    //overrides the past method 
+    public int playRound(int input, int randNum)
+    {
+        super.playRound(input, randNum)
+    }
+
+
+}
