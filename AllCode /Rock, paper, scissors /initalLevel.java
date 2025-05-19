@@ -17,7 +17,7 @@ public class initalLevel {
     public static int HighestLevelUnlocked ; //so i can track throught the game 
     public int ClassLevel = 1; 
     public static boolean CheatMode = true;
-    public static String[] PlayChoices = {"Rock","Paper", "Scissors", "Fork", "Spoon", "Fire", "Water", "Gun"}; 
+    public static String[] PlayChoices = {"Rock","Paper", "Scissors", "Fork", "Spoon", "Fire", "Water", "NERF Gun"}; 
     public Scanner reader = new Scanner(System.in);
     public static boolean SecretLevelUnlocked = false; 
 
@@ -41,26 +41,26 @@ public void mainMenu()
     while(CanRun) // checks if it can run 
     {
         //prints the main menu 
-        System.out.println("\n----- Main Menu -----");
-         System.out.println("0 - Exit");
-        System.out.println("1 - Level 1: Rock Paper Scissors");
+        System.out.println("\n-✦•┈๑⋅⋯ ⋯⋅๑┈•✦ Main Menu ✦•┈๑⋅⋯ ⋯⋅๑┈•✦");
+         System.out.println("    0 * Exit 🏳️");
+        System.out.println("    1 * Level 1: Rock Paper Scissors");
         if (HighestLevelUnlocked >= 2) //if they unlcked the leevel, it will be reflected here. 
         {
-                System.out.println("2 - Level 2: + Fork & Spoon");
+                System.out.println("    2 * Level 2: + Fork 🍴 & Spoon 🥄");
         }
          if (HighestLevelUnlocked >= 3) //if they unlcked the leevel, it will be reflected here. 
          {
-                System.out.println("3 - Level 3: + Fire & Water");
+                System.out.println("    3 * Level 3: + Fire 🔥 & Water 🌊");
          }
          if (SecretLevelUnlocked) //if they unlcked the leevel, it will be reflected here. 
         {
-                System.out.println("4 - Secret Level: Gun");
+                System.out.println("    4 * Secret Level: Gun");
          }
          if(CheatMode) //if it is on, print it so 
          {
-            System.out.println("Cheat Mode: On");
+            System.out.println("Cheat Mode: ✨ On ✨");
          } else { System.out.println("Cheat Mode: Off");}
-         System.out.print("Enter choice: "); //this will alowe thme to make a cohoice in the menu 
+         System.out.print(".𖥔 ݁ ˖ Enter choice .𖥔 ݁ ˖"); //this will alowe thme to make a cohoice in the menu 
             int choice = reader.nextInt();
         
             if (choice == 0) { //if htye want to exit, they leave 
@@ -77,14 +77,14 @@ public void mainMenu()
                     initalLevel obj = new Level2();  //make a subclass object of the second one, with upcasting so that when i call a menu functino or something, it will play for level two 
                         obj.PlayLevel(); //plays it 
                 } else { //if not unlcoekc ed then you have ot say that that was whta is twa s
-                    System.out.println("Level 2 locked. Win Level 1 to unlock."); //otherwise it says that it is ulcl
+                    System.out.println(" 🔐Level 2 locked.🔐 \n Win Level 1 to unlock."); //otherwise it says that it is ulcl
                 }
             } else if (choice == 3) {
                 if (HighestLevelUnlocked >= 3) {
                     initalLevel obj = new Level3(); //make a subclass object of the second one, with upcasting so that when i call a menu functino or something, it will play for level two 
                         obj.PlayLevel(); //plays it 
              } else {
-                    System.out.println("Level 3 locked. Win Level 2 to unlock."); //if not unlcoekc ed then you have ot say that that was whta is twa s
+                    System.out.println("🔐Level 3 locked.🔐 \n Win Level 2 to unlock."); //if not unlcoekc ed then you have ot say that that was whta is twa s
                 }
             } else if (choice == 4) {//can play secret level if unlockec 
                
@@ -92,7 +92,7 @@ public void mainMenu()
                     new SecretLevel().PlayLevel();
                 } 
                 else {//if not unlcoekc ed then you have ot say that that was whta is twa s
-                    System.out.println("Secret Level locked. Win Level 3 to unlock.");
+                    System.out.println("🔐Secret Level locked.🔐 \n Win Level 3 to unlock.");
                 }
             } else {
                 System.out.println("Invalid choice!");
@@ -109,7 +109,7 @@ public void unlockNextLevel() {
 
     if (HighestLevelUnlocked < next) { //if it is any diffrent / they can unlcok another level, then do so 
         HighestLevelUnlocked = next; // make it the new one + 1
-        System.out.println("Level " + next + " unlocked!"); // and saw what level is unlcoekd 
+        System.out.println(" ヽ(°〇°)ﾉ \n ✮✮✮ Level " + next + " unlocked! ✮✮✮"); // and saw what level is unlcoekd 
     }
     if (HighestLevelUnlocked > 3) { //if there is a command sent, and 3 is the higest, unlock the secret level
         SecretLevelUnlocked = true; 
@@ -129,49 +129,49 @@ public void PlayLevel()
         int ComputerChoice = RandNum(); 
         if (CheatMode)
         {
-            System.out.println("[Cheat] Computer will play: " + PlayChoices[ComputerChoice]);
+            System.out.println("[Cheat] Computer will play: ✨ " + PlayChoices[ComputerChoice] + " ✨");
         }
         int PlayerChoice = reader.nextInt(); //reads user input
         
         //rand num = 2 since there are only 3 choices
         int PlayerWinRound = playRound(PlayerChoice, ComputerChoice); 
-        System.out.println("-----------------------------Round "+(x+1)+"/3 ---------------------------------"); 
-        System.out.print("System Choice: " + PlayChoices[ComputerChoice] + "\n Player Choice: " + PlayChoices[PlayerChoice]); 
+        System.out.println("*ੈ✩‧₊˚༺☆༻*ੈ✩‧₊˚ Round "+(x+1)+"/3 *ੈ✩‧₊˚༺☆༻*ੈ✩‧₊˚"); 
+        System.out.print(" ⚙︎⚙︎ 👾 System Choice: " + PlayChoices[ComputerChoice] + "⚙︎⚙︎ \n 𖨆 🎮 Player Choice: " + PlayChoices[PlayerChoice]+ "𖨆"); 
 
         if (PlayerWinRound == 2) // if it is a tie 
         {  
-            System.out.print(" It is a tie! do it again"); 
+            System.out.print(" (ᵕ—ᴗ—) \n 🎀🎀 It is a tie! do it again 🎀🎀"); 
             //
             
         } else if (PlayerWinRound == 1)
         {
-            System.out.print (" you have won this round! "); 
+            System.out.println(" ⛔⛔ you have won this round! ⛔⛔"); 
             x ++; 
             currentPoints++ ; //make the current points increased 
 
         } else if (PlayerWinRound == 0 )
         {
-            System.out.println("you have lost this round!"); 
+            System.out.println("\n 🎯🎯 you have lost this round! 🎯🎯"); 
             x ++ ; 
         } else {
              //if it is an invalid oepration, print it and tell them to do it again 
         }
-        System.out.println(" you have " + currentPoints + " points"); 
+        System.out.println(" you have ⭐ " + currentPoints + " points ⭐"); 
 
-    }
+}
 
     if (currentPoints >= 2)// if you have won the level 
     {
-        System.out.println("You have won this level");
+        System.out.println("ᕙ(  •̀ ᗜ •́  )ᕗ \n 🎉🎉 You have won this level 🎉🎉");
         if(HighestLevelUnlocked < ClassLevel) 
         {
-            System.out.println(" you have unlocked a new level!"); 
+            System.out.println(" 🔓🔓 you have unlocked a new level! 🔓🔓"); 
            
         }
         unlockNextLevel(); //updates it 
     } else 
     {
-        System.out.println("you have lost this level");
+        System.out.println("(꩜ ᯅ ꩜) \nyou have lost this level");
 
     }
 
@@ -182,11 +182,11 @@ public void PrintMenu() //prints the options the user has
 {
 
     System.out.println("""
-        -----Options-----
-        0 - Rock 
-        1 - Paper 
-        2 - Scissors 
-        enter play here: 
+        ⋆.ೃ࿔*:･Options⋆.ೃ࿔*:･
+            0 * Rock 
+            1 * Paper 
+            2 * Scissors 
+        ˋ°•* enter play here °•*⁀➷ 
         """); 
 }
 

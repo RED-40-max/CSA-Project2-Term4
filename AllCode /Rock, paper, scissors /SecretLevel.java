@@ -1,3 +1,9 @@
+/* program: secret level 
+    + extends from level 3
+    + beat level 1, level 2, and level 3, in order, wihtout losses to unlock NERF gun 
+
+ */ 
+
 public class SecretLevel extends Level3 {
 
     public SecretLevel() {
@@ -7,7 +13,7 @@ public class SecretLevel extends Level3 {
     //an overrided method for the print menu 
     public void PrintMenu() {
     System.out.println("!!! Secret Level unlocked: includes Gun !!!");
-        System.out.println("'Gun beats everyone and never loses.'");
+        System.out.println("'NERF Gun beats everyone and never loses.'");
     System.out.println("");
         System.out.println("""
             -----Options-----
@@ -18,8 +24,8 @@ public class SecretLevel extends Level3 {
             4 - Spoon
             5 - Water
             6 - Fire
-            7 - Gun
-            enter play here:
+            7 - NERF Gun
+            °•* enter play here °•*⁀➷ 
             """);
     }
 
@@ -70,16 +76,16 @@ public class SecretLevel extends Level3 {
                 int result = current.playRound(input, randNum); //finds the result of the game based on what thing it is 
     
                 if (result == 2) { //if there is a tie then you replay
-                    System.out.println("Tie—replay this round.");
+                    System.out.println("🎀🎀Tie—replay this round.🎀🎀");
     
                 } 
                 else if (result == 1) { //if there is a round winning
-                    System.out.println("You win this round!");
+                    System.out.println("🎯🎯 You win this round! 🎯🎯 ");
                     rounds++; //incremenest rouds becuse it switches to the next one, 
                     wins++; //adds to the wins
                 } 
                 else if (result == 0) { //if there is a loss, then there is nothing you can do. 
-                    System.out.println("You lose this round.");
+                    System.out.println("⛔⛔You lose this round.⛔⛔");
                     rounds++; //incremenst to the thing
                 } 
                 else {
@@ -87,21 +93,21 @@ public class SecretLevel extends Level3 {
                 } //makes you try again 
     
 
-                System.out.printf("Score Overall:" + wins);
+                System.out.println("Score Overall:" + wins);
             }
     
             if (wins < 2) { // if there are less than two wins, you loose that level 
-                System.out.printf("--- Failed Level"+ LevelNum +". Secret Trial failed. ---");
+                System.out.println("--- Failed Level"+ LevelNum +". Secret Trial failed. ---");
                 return; 
             } else { //if there are more then two wins, then you win that level 
-                System.out.printf("+++ Level "+ LevelNum +" Cleared!");
+                System.out.println("+++ Level "+ LevelNum +" Cleared!");
             }
         }
     
         // all three levels cleared!
-        System.out.println("\n★★★ Congratulations! You have conquered the Secret Trial! ★★★");
+        System.out.println("✧｡٩(ˊᗜˋ )و✧*｡ \n★★★ Congratulations! You have conquered the Secret Trial! ★★★");
         SecretLevelUnlocked = true; //makes it so you can acess gun 
-        System.out.println("Gun unlocked! Now play with every option available:\n");
+        System.out.println(" 🔫 NERF Gun unlocked! \n Now play with every option available:\n");
     
         // hand control back to the normal PlayLevel (with Gun enabled)
         super.PlayLevel();

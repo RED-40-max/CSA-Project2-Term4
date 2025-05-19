@@ -1,5 +1,6 @@
-
-/* program: 
+/* program: level 3
+    + extends from level 2 
+    adds fire and water in addition to the other stuff
 
  */ 
 
@@ -20,15 +21,15 @@
          System.out.println(" "); 
  
          System.out.println("""
-             -----Options-----
-             0 - Rock
-             1 - Paper
-             2 - Scissors
-             3 - Fork
-             4 - Spoon
-             5 - Water
-             6 - Fire 
-             enter play here:
+             .ೃ࿔*:･Options⋆.ೃ࿔*:･
+                0 * Rock 
+                1 * Paper
+                2 * Scissors
+                3 * Fork
+                4 * Spoon
+                5 * Water
+                6 * Fire 
+             °•* enter play here °•*⁀➷ 
              """);
  
      }

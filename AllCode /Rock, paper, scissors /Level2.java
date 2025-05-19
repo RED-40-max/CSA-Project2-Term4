@@ -1,6 +1,7 @@
 /* Program: level 2 
     + add / unlock some new features, 
     + diffrent menu, and play round sequence 
+    + adds fork and spoon to the mix, and barrows from lvl one since it is a subclass
  */
 
 public class Level2 extends initalLevel
@@ -22,19 +23,18 @@ public class Level2 extends initalLevel
         System.out.println(" ************************************************************"); 
 
         System.out.println("""
-            -----Options-----
-            0 - Rock 
-            1 - Paper
-            2 - Scissors
-            3 - Fork
-            4 - Spoon
-            enter play here:
+            .ೃ࿔*:･Options⋆.ೃ࿔*:･
+                0 * Rock 
+                1 * Paper
+                2 * Scissors
+                3 * Fork
+                4 * Spoon
+            °•* enter play here °•*⁀➷ 
             """);
 
     }
 
    
-
     //overrides the past method 
     public int playRound(int input, int randNum)
     {
