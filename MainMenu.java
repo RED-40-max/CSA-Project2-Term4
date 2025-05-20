@@ -21,11 +21,11 @@ public class MainMenu
         {
             //prints the main menu 
             System.out.println("\n. ݁₊ ⊹ . ݁˖ . ݁ Arcade Menu . ݁₊ ⊹ . ݁˖ . ݁");
-            System.out.println("1 -  Hang-Man ");
-            System.out.println("2 -  Rock-Paper-Gun");
-            System.out.println("3 -  ");
-            System.out.println("4 -   ");
-            System.out.println("5 -   ");
+            System.out.println("1 - Hang-Man");
+            System.out.println("2 - Rock-Paper-Gun");
+            System.out.println("3 - Text Adventure");
+            System.out.println("4 - Maze Game");
+            System.out.println("5 - Tic-Tac-Toe");
             System.out.println("9 - Random");
             System.out.println("0 - to exit");
             System.out.println(" ヾ(＾ ∇ ＾). enter choice here:"); 
@@ -56,16 +56,26 @@ public class MainMenu
                     obj.mainMenu();
                     break;
                 case 3: 
-                    System.out.println("[GAME NAME] chosen. Loading now...");
+                    System.out.println("Text-Adventure chosen. Loading now...");
                     //call the method for the game here: 
                     break;
                 case 4: 
-                    System.out.println("[GAME NAME] chosen. Loading now...");
+                    System.out.println("Maze game chosen. Loading now...");
                     //call the method for the game here: 
                     break;
                 case 5: 
-                    System.out.println("[GAME NAME] chosen. Loading now...");
+                    System.out.println("Tic-Tac-Toe chosen. Loading now...");
                     //call the method for the game here: 
+                    Scanner input = new Scanner(System.in);
+                        System.out.println("Welcome to Tic Tac Toe!");
+                        boolean continuePlay = true;
+                        do {
+                        TicTacToe game = new TicTacToe();
+                        game.play(); 
+                        System.out.println("Would you like to play another round? Enter 1 if yes, 0 if no.");
+                        int answer = input.nextInt();
+                        if (answer == 0) continuePlay = false;
+                        } while (continuePlay);
                     break;
                 default: 
                     System.out.println("error try again");

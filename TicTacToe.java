@@ -96,17 +96,17 @@ public class TicTacToe {
         }
     }
 
-    public static void main(String[] args) {
-       Scanner input = new Scanner(System.in);
-       System.out.println("Welcome to Tic Tac Toe!");
-       boolean continuePlay = true;
+    // public static void main(String[] args) {
+    //    Scanner input = new Scanner(System.in);
+    //    System.out.println("Welcome to Tic Tac Toe!");
+    //    boolean continuePlay = true;
        
-       do {
-       TicTacToe game = new TicTacToe();
-       game.play(); 
-       System.out.println("Would you like to play another round? Enter 1 if yes, 0 if no.");
-       int answer = input.nextInt();
-       if (answer == 0) continuePlay = false;
-       } while (continuePlay);
-    }
+    //    do {
+    //    TicTacToe game = new TicTacToe();
+    //    game.play(); 
+    //    System.out.println("Would you like to play another round? Enter 1 if yes, 0 if no.");
+    //    int answer = input.nextInt();
+    //    if (answer == 0) continuePlay = false;
+    //    } while (continuePlay);
+    // }
 }
