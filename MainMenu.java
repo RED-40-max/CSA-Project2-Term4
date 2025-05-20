@@ -3,7 +3,9 @@
  
  */
 
-import java.util.Scanner; 
+import java.util.Scanner;
+
+import AllCode .HangMan.Hangman; 
 
 public class MainMenu 
 {
@@ -44,6 +46,8 @@ public class MainMenu
                 case 1: 
                     System.out.println("Hang-Man chosen. Loading now...");
                     //call the method for the game here: 
+                    Hangman HM = new Hangman(0,"",0);
+                    HM.WelcomeScreen();
                     break;
                 case 2: 
                     System.out.println("Rock-Paper-Gun chosen. Loading now...");
