@@ -58,6 +58,12 @@ public class MainMenu
                 case 3: 
                     System.out.println("Text-Adventure chosen. Loading now...");
                     //call the method for the game here: 
+                    public static void main(String[] args) {
+                   	Scanner read = new Scanner(System.in);
+                       txtnetadventure obj = new txtnetadventure();
+                       obj.intro();
+                
+                       }
                     break;
                 case 4: 
                     System.out.println("Maze game chosen. Loading now...");
