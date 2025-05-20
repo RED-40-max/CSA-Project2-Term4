@@ -68,7 +68,7 @@ public class MainMenu
                     System.out.println(" you are the letter Y and you need to go to the letter D to escape the maze\n");
                     Maze mazerun = new Maze(); 
                         mazerun.playLevel1();
-                         mazerun.playLevel2();
+                        mazerun.playLevel2();
             
                     System.out.println(" \nYou escaped both mazes you did it!!!!!");
                     break;
