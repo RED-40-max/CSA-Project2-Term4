@@ -1,4 +1,4 @@
- package net;
+
 import java.util.*;
 public class txtnetadventure {
    // public static void main(String[] args) {
