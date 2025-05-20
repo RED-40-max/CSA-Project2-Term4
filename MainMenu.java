@@ -62,6 +62,15 @@ public class MainMenu
                 case 4: 
                     System.out.println("Maze game chosen. Loading now...");
                     //call the method for the game here: 
+                        
+                    System.out.println("➴➵➶➴➵➶➴➵➶➶-͙˚ ༘✶✄┈┈┈┈ Welome to the Maze Game-✄┈┈┈┈➶-͙˚ ༘✶➴➵➶➴➵➶➴➵➶");
+                    System.out.println("Use W to go up\nUse A to go left\nUse S to go down\nUse D to go right");
+                    System.out.println(" you are the letter Y and you need to go to the letter D to escape the maze\n");
+                    playLevel1();
+                    playLevel2();
+            
+                    System.out.println(" \nYou escaped both mazes you did it!!!!!");
+                    reader.close();
                     break;
                 case 5: 
                     System.out.println("Tic-Tac-Toe chosen. Loading now...");
