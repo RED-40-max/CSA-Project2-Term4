@@ -8,7 +8,7 @@ public class Hangman {
 	//that i spent too much time figuring out how it works :sob:
 
 	public void WelcomeScreen() {
-		System.out.println("Welcome to Hangman!"); 
+		System.out.println("✧⋄⋆⋅⋆⋄ Welcome to Hangman ⋄⋆⋅⋆⋄✧"); 
 		System.out.println("Would you like to start a game? (1 - Yes, 2 - No)"); //Askign just incase user made typo
 		int start=reader.nextInt(); //getting user input
 		reader.nextLine(); //prevents error with skipping inputs with many nextInts and nextLines
@@ -46,8 +46,9 @@ public class Hangman {
 		//System.out.println(Word); //debugging
 		System.out.println();
 		System.out.println(DisplayPRINT); //prints the underscores for the first time
-		System.out.println("The dashes above show the amount of letters there are in the choosen word!");
-		System.out.print("GAME STARTED: ");
+		System.out.println("The dashes above show the amount of letters there are in the choosen word! (◕ᴗ◕✿)");
+		System.out.println("* . °•★ GAME STARTED ☆•° . * ");
+		//* . °•★|•°∵ ∵°•|☆•° . *  
 		while (LettersMissed!=6) { //runs until the player wins or player misses 6 times
 		    
 			System.out.println("Enter a letter to start guessing!");
@@ -79,14 +80,14 @@ public class Hangman {
 				System.out.println("You have "+(6-LettersMissed)+" times left to try!"); 
 			}
 			if (Display.indexOf("_") == -1) { //if no more "_", tell player they won
-                System.out.println("Congrats! You guessed the word: " + Word);
+                System.out.println(" ݁₊ ⊹ . ݁˖ Congrats! You guessed the word: " + Word);
                 break; //END LOOP, GO BACK TO MAIN
             }
 
 		}
 		if (LettersMissed==6){ //if letters missed hits 6, tell player they lost and go back to Main
-		    System.out.println("GAME OVER!! The word was: "+Word);
-		    System.out.println("Returning to the main screen. Loading now...");
+		    System.out.println(" ݁₊ ⊹ . ݁˖ GAME OVER!! The word was: "+Word);
+		    System.out.println(" ݁₊ ⊹ . ݁˖ Returning to the main screen. Loading now...");
 		}
 	}
 	
