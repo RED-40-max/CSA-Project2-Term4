@@ -1,0 +1,7 @@
+the file is called:
+Hangman.java
+
+In main add:
+Hangman HM = new Hangman(0,"",0);
+and in case 3 add:
+HM.WelcomeScreen();
