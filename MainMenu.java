@@ -71,7 +71,6 @@ public class MainMenu
                          mazerun.playLevel2();
             
                     System.out.println(" \nYou escaped both mazes you did it!!!!!");
-                    reader.close();
                     break;
                 case 5: 
                     System.out.println("Tic-Tac-Toe chosen. Loading now...");
