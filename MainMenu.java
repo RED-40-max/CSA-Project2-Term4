@@ -5,7 +5,7 @@
 
 import java.util.Scanner;
 
-import AllCode .HangMan.Hangman; 
+//import AllCode.HangMan; 
 
 public class MainMenu 
 {
@@ -22,7 +22,7 @@ public class MainMenu
             //prints the main menu 
             System.out.println("\n. ݁₊ ⊹ . ݁˖ . ݁ Arcade Menu . ݁₊ ⊹ . ݁˖ . ݁");
             System.out.println("1 -  Hang-Man ");
-            System.out.println("2 -   ");
+            System.out.println("2 -  Rock-Paper-Gun");
             System.out.println("3 -  ");
             System.out.println("4 -   ");
             System.out.println("5 -   ");
