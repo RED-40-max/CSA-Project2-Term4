@@ -16,11 +16,14 @@ public class Level2 extends initalLevel
     {
         
         //now it prints out spoon and fork 
-        System.out.println(" ************************************************************"); 
-        System.out.println("!!! level now contains 'fork' and 'spoon' !!!"); 
+        System.out.println(" "); 
+        System.out.println("*ੈ✩‧₊˚༺☆༻*ੈ✩‧₊˚*ੈ✩‧₊˚༺☆༻*ੈ✩‧₊˚*ੈ✩‧₊˚༺☆༻*ੈ✩‧₊˚");
+        System.out.println("!!! level contains 'fork' and 'spoon' !!!"); 
         System.out.println("'Fork beats: rock, paper \n and Fork is beaten by: rock, spoon "); 
         System.out.println("Spoon beats: fork, rock \n and Spoon is beaten by: paper, scissors"); 
-        System.out.println(" ************************************************************"); 
+        System.out.println("*ੈ✩‧₊˚༺☆༻*ੈ✩‧₊˚*ੈ✩‧₊˚༺☆༻*ੈ✩‧₊˚*ੈ✩‧₊˚༺☆༻*ੈ✩‧₊˚");
+        System.out.println(" "); 
+        System.out.println(" "); 
 
         System.out.println("""
             .ೃ࿔*:･Options⋆.ೃ࿔*:･

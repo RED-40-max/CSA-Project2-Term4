@@ -15,9 +15,13 @@
  
      public void PrintMenu() 
      {
+        System.out.println(" "); 
+        System.out.println("*ੈ✩‧₊˚༺☆༻*ੈ✩‧₊˚*ੈ✩‧₊˚༺☆༻*ੈ✩‧₊˚*ੈ✩‧₊˚༺☆༻*ੈ✩‧₊˚");
          System.out.println("!!! level now contains 'Water' and 'Fire' !!!"); 
          System.out.println("'Water beats: scissors, paper, fire \n and water is beaten by: rock, fork, spoon  "); 
          System.out.println("Fire beats: rock, fork, spoon  \n and Fire is beaten by: water, paper, scissors"); 
+         System.out.println("*ੈ✩‧₊˚༺☆༻*ੈ✩‧₊˚*ੈ✩‧₊˚༺☆༻*ੈ✩‧₊˚*ੈ✩‧₊˚༺☆༻*ੈ✩‧₊˚");
+         System.out.println(" "); 
          System.out.println(" "); 
  
          System.out.println("""

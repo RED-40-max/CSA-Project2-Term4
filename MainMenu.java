@@ -2,6 +2,7 @@
     + arcades main menu that controls the other functions 
  
  */
+
 import java.util.Scanner; 
 
 public class MainMenu 
@@ -18,7 +19,7 @@ public class MainMenu
         {
             //prints the main menu 
             System.out.println("\n. ݁₊ ⊹ . ݁˖ . ݁ Arcade Menu . ݁₊ ⊹ . ݁˖ . ݁");
-            System.out.println("1 -  ");
+            System.out.println("1 -  Hang-Man ");
             System.out.println("2 -   ");
             System.out.println("3 -  ");
             System.out.println("4 -   ");
@@ -41,12 +42,14 @@ public class MainMenu
            switch(UserChoice)
            {
                 case 1: 
-                    System.out.println("[GAME NAME] chosen. Loading now...");
+                    System.out.println("Hang-Man chosen. Loading now...");
                     //call the method for the game here: 
                     break;
                 case 2: 
-                    System.out.println("[GAME NAME] chosen. Loading now...");
+                    System.out.println("Rock-Paper-Gun chosen. Loading now...");
                     //call the method for the game here: 
+                    initalLevel obj = new initalLevel();
+                    obj.mainMenu();
                     break;
                 case 3: 
                     System.out.println("[GAME NAME] chosen. Loading now...");

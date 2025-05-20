@@ -36,11 +36,12 @@ public int RandNum()
 //this is the method that makes the menu run 
 
 public void mainMenu() 
-{
+{  
     boolean CanRun = true ; 
     while(CanRun) // checks if it can run 
     {
         //prints the main menu 
+        System.out.println("*ੈ✩‧₊˚༺☆༻*ੈ✩‧₊˚*ੈ✩‧₊˚༺☆༻*ੈ✩‧₊˚*ੈ✩‧₊˚༺☆༻*ੈ✩‧₊˚");
         System.out.println("\n-✦•┈๑⋅⋯ ⋯⋅๑┈•✦ Main Menu ✦•┈๑⋅⋯ ⋯⋅๑┈•✦");
          System.out.println("    0 * Exit 🏳️");
         System.out.println("    1 * Level 1: Rock Paper Scissors");
@@ -60,11 +61,13 @@ public void mainMenu()
          {
             System.out.println("Cheat Mode: ✨ On ✨");
          } else { System.out.println("Cheat Mode: Off");}
-         System.out.print(".𖥔 ݁ ˖ Enter choice .𖥔 ݁ ˖"); //this will alowe thme to make a cohoice in the menu 
+         System.out.println(".𖥔 ݁ ˖ Enter choice .𖥔 ݁ ˖"); //this will alowe thme to make a cohoice in the menu 
             int choice = reader.nextInt();
         
             if (choice == 0) { //if htye want to exit, they leave 
+                System.out.println("  ");
                 System.out.println("Thanks for playing!");
+                System.out.println("*ੈ✩‧₊˚༺☆༻*ੈ✩‧₊˚*ੈ✩‧₊˚༺☆༻*ੈ✩‧₊˚*ੈ✩‧₊˚༺☆༻*ੈ✩‧₊˚");
                 CanRun = false;  
                 break; //breaks ou t of the loop  
 
@@ -77,14 +80,18 @@ public void mainMenu()
                     initalLevel obj = new Level2();  //make a subclass object of the second one, with upcasting so that when i call a menu functino or something, it will play for level two 
                         obj.PlayLevel(); //plays it 
                 } else { //if not unlcoekc ed then you have ot say that that was whta is twa s
+                    System.out.println("  ");
                     System.out.println(" 🔐Level 2 locked.🔐 \n Win Level 1 to unlock."); //otherwise it says that it is ulcl
+                    System.out.println("  ");
                 }
             } else if (choice == 3) {
                 if (HighestLevelUnlocked >= 3) {
                     initalLevel obj = new Level3(); //make a subclass object of the second one, with upcasting so that when i call a menu functino or something, it will play for level two 
                         obj.PlayLevel(); //plays it 
              } else {
+                    System.out.println("  ");
                     System.out.println("🔐Level 3 locked.🔐 \n Win Level 2 to unlock."); //if not unlcoekc ed then you have ot say that that was whta is twa s
+                    System.out.println("  ");
                 }
             } else if (choice == 4) {//can play secret level if unlockec 
                
@@ -92,10 +99,14 @@ public void mainMenu()
                     new SecretLevel().PlayLevel();
                 } 
                 else {//if not unlcoekc ed then you have ot say that that was whta is twa s
+                    System.out.println("  ");
                     System.out.println("🔐Secret Level locked.🔐 \n Win Level 3 to unlock.");
+                    System.out.println("  ");
                 }
             } else {
+                System.out.println("  ");
                 System.out.println("Invalid choice!");
+                System.out.println("  ");
             }
 
     }
@@ -109,6 +120,7 @@ public void unlockNextLevel() {
 
     if (HighestLevelUnlocked < next) { //if it is any diffrent / they can unlcok another level, then do so 
         HighestLevelUnlocked = next; // make it the new one + 1
+        System.out.println("  ");
         System.out.println(" ヽ(°〇°)ﾉ \n ✮✮✮ Level " + next + " unlocked! ✮✮✮"); // and saw what level is unlcoekd 
     }
     if (HighestLevelUnlocked > 3) { //if there is a command sent, and 3 is the higest, unlock the secret level
@@ -129,57 +141,68 @@ public void PlayLevel()
         int ComputerChoice = RandNum(); 
         if (CheatMode)
         {
+            System.out.println("  ");
             System.out.println("[Cheat] Computer will play: ✨ " + PlayChoices[ComputerChoice] + " ✨");
+            System.out.println("  ");
         }
         int PlayerChoice = reader.nextInt(); //reads user input
         
         //rand num = 2 since there are only 3 choices
         int PlayerWinRound = playRound(PlayerChoice, ComputerChoice); 
+        System.out.println("  ");
         System.out.println("*ੈ✩‧₊˚༺☆༻*ੈ✩‧₊˚ Round "+(x+1)+"/3 *ੈ✩‧₊˚༺☆༻*ੈ✩‧₊˚"); 
         System.out.print(" ⚙︎⚙︎ 👾 System Choice: " + PlayChoices[ComputerChoice] + "⚙︎⚙︎ \n 𖨆 🎮 Player Choice: " + PlayChoices[PlayerChoice]+ "𖨆"); 
+        System.out.println("  ");
 
         if (PlayerWinRound == 2) // if it is a tie 
-        {  
+        {   System.out.println("  ");
             System.out.print(" (ᵕ—ᴗ—) \n 🎀🎀 It is a tie! do it again 🎀🎀"); 
+            System.out.println("  ");
             //
             
         } else if (PlayerWinRound == 1)
-        {
-            System.out.println(" ⛔⛔ you have won this round! ⛔⛔"); 
+        { System.out.println("  ");
+            System.out.println(" 🎯🎯 you have won this round!  🎯🎯"); 
+            System.out.println("  ");
             x ++; 
             currentPoints++ ; //make the current points increased 
 
         } else if (PlayerWinRound == 0 )
-        {
-            System.out.println("\n 🎯🎯 you have lost this round! 🎯🎯"); 
+        {  System.out.println("  ");
+            System.out.println("\n ⛔⛔ you have lost this round! ⛔⛔"); 
+            System.out.println("  ");
             x ++ ; 
         } else {
              //if it is an invalid oepration, print it and tell them to do it again 
         }
+        System.out.println("  ");
         System.out.println(" you have ⭐ " + currentPoints + " points ⭐"); 
+        System.out.println("  ");
 
 }
 
     if (currentPoints >= 2)// if you have won the level 
-    {
+    { System.out.println("  ");
         System.out.println("ᕙ(  •̀ ᗜ •́  )ᕗ \n 🎉🎉 You have won this level 🎉🎉");
+        System.out.println("  ");
         if(HighestLevelUnlocked < ClassLevel) 
-        {
+        { System.out.println("  ");
             System.out.println(" 🔓🔓 you have unlocked a new level! 🔓🔓"); 
-           
+            System.out.println("  ");
         }
         unlockNextLevel(); //updates it 
     } else 
-    {
+    { System.out.println("  ");
         System.out.println("(꩜ ᯅ ꩜) \nyou have lost this level");
-
+        System.out.println("  ");
     }
 
 
 }
 
 public void PrintMenu() //prints the options the user has 
-{
+{ 
+    System.out.println("*ੈ✩‧₊˚༺☆༻*ੈ✩‧₊˚*ੈ✩‧₊˚༺☆༻*ੈ✩‧₊˚*ੈ✩‧₊˚༺☆༻*ੈ✩‧₊˚");
 
     System.out.println("""
         ⋆.ೃ࿔*:･Options⋆.ೃ࿔*:･
