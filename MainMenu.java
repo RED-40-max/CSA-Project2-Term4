@@ -66,9 +66,9 @@ public class MainMenu
                     System.out.println("➴➵➶➴➵➶➴➵➶➶-͙˚ ༘✶✄┈┈┈┈ Welome to the Maze Game-✄┈┈┈┈➶-͙˚ ༘✶➴➵➶➴➵➶➴➵➶");
                     System.out.println("Use W to go up\nUse A to go left\nUse S to go down\nUse D to go right");
                     System.out.println(" you are the letter Y and you need to go to the letter D to escape the maze\n");
-                    Maze obj = new Maze(); 
-                       obj.playLevel1();
-                        obj.playLevel2();
+                    Maze mazerun = new Maze(); 
+                        mazerun.playLevel1();
+                         mazerun.playLevel2();
             
                     System.out.println(" \nYou escaped both mazes you did it!!!!!");
                     reader.close();
@@ -91,7 +91,7 @@ public class MainMenu
                         int answer = input.nextInt();
 
                         if (answer == 0) continuePlay = false;
-                        
+
                         } while (continuePlay);
                     break;
                 default: 
