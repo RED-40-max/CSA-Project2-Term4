@@ -85,7 +85,7 @@ public class Maze {
             for (int Y = 0; Y < maze[X].length; Y++) {
                 if (maze[X][Y] == 'W') {
                     // to make it loiok nice put edges as `-`, and insides as `|`
-                    if (i == 0 || i == maze.length - 1) {
+                    if (X == 0 || X == maze.length - 1) {
                         System.out.print("- ");
                     } else {
                         System.out.print("| ");

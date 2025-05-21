@@ -1,8 +1,8 @@
 
 import java.util.*;
 public class txtnetadventure {
-  public static void main(String[] args) {
-//   	Scanner read = new Scanner(System.in);
+ // public static void main(String[] args) {
+   	Scanner read = new Scanner(System.in);
 //       txtnetadventure obj = new txtnetadventure();
 //       obj.intro();
 //   }
