@@ -1,16 +1,13 @@
-
+package net;
 import java.util.*;
 public class txtnetadventure {
-   // public static void main(String[] args) {
-   // 	Scanner read = new Scanner(System.in);
-   //     txtnetadventure obj = new txtnetadventure();
-   //     obj.intro();
-
-   // }
-	public void intro() {
-
-
-		Scanner read = new Scanner(System.in);
+ //  public static void main(String[] args) {
+ //  	Scanner read = new Scanner(System.in);
+ //      txtnetadventure obj = new txtnetadventure();
+ //      obj.intro();
+ //  }
+	// public void intro() {
+	// 	Scanner read = new Scanner(System.in);
 		
 		
 		System.out.println("Welcome to Soul City, a mystical place, home to the world of Mobius's finest creatures.");
@@ -42,10 +39,11 @@ public class txtnetadventure {
 		{
 			palace();
 		}
-
-		
-		
-		
+		else
+		{
+			System.out.println("Error: Restarting the page");
+			intro();
+		}
 	
 		
 	}
@@ -53,12 +51,9 @@ public class txtnetadventure {
 public void chambers()
 {
 	Scanner read = new Scanner(System.in);
-
 	System.out.println("You approched the chambers. Legend says that the chamber was sealed long ago, after the previous ruler contracted an chaotic crave for power.");
 	delay();
 	System.out.println("Since then, no one has entered the chamber");
-
-
 	System.out.println("Tall Pillars tower over you, making you feel a sense of dread.");
 	delay();
 	delay();
@@ -94,7 +89,6 @@ public void chambers()
 	delay();
 	
 	intro();
-
 }
 public void news()
 {
@@ -119,14 +113,19 @@ public void news()
 	delay();
 	delay();
 	}
+	else
+	{
+System.out.println("Error: Restarting the page");
+news();
+	}
 	
 }
 public void palace()
 {
 	Scanner read = new Scanner(System.in);
-	System.out.println("The palace is usually only for the ruler to enter.");	 
+	System.out.println("The palace is usually only for the ruler to enter.");	
 	delay();
-	System.out.println("However, in this case the doors were left open");	 
+	System.out.println("However, in this case the doors were left open");	
 	delay();
 	System.out.println("Entering now will mean that you cannot escape, as the door would lock behind you.");
 	delay();
@@ -149,7 +148,11 @@ public void palace()
 	delay();
 	delay();
 	}
-	
+	else
+	{
+System.out.println("Error: Restarting the page");
+palace();
+	}
 	
 }
 public void delay() {
@@ -160,6 +163,5 @@ public void delay() {
 		}
 	}
 }
-
 
 
