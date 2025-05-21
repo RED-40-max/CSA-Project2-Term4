@@ -1,13 +1,13 @@
-package net;
+
 import java.util.*;
 public class txtnetadventure {
- //  public static void main(String[] args) {
- //  	Scanner read = new Scanner(System.in);
- //      txtnetadventure obj = new txtnetadventure();
- //      obj.intro();
- //  }
-	// public void intro() {
-	// 	Scanner read = new Scanner(System.in);
+  public static void main(String[] args) {
+//   	Scanner read = new Scanner(System.in);
+//       txtnetadventure obj = new txtnetadventure();
+//       obj.intro();
+//   }
+	public void intro() {
+		Scanner read = new Scanner(System.in);
 		
 		
 		System.out.println("Welcome to Soul City, a mystical place, home to the world of Mobius's finest creatures.");
