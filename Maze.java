@@ -18,9 +18,9 @@ public class Maze {
 //         reader.close();
 //     }
 
-   /// the first lele
+   /// the first lele 
     public static void playLevel1() {
-        maze = new char[][]{
+        maze = new char[][]{//Char 2d array USED FOR HELP --https://www.geeksforgeeks.org/different-ways-to-declare-and-initialize-2-d-array-in-java/
             {'W', 'W', 'W', 'W', 'W', 'W', 'W'},
             {'W', 'Y', ' ', ' ', ' ', 'W', 'W'},
             {'W', 'W', 'W', ' ', 'W', ' ', 'W'},
@@ -32,13 +32,13 @@ public class Maze {
         playerRow = 1;
         playerCol = 1;
 
-        System.out.println("level 1 - Small Maze");
-        runMaze();
+        System.out.println("level 1 ->Small Maze");
+        runMaze();//Call run maze
     }
 
     ////hte seocng lelvel
     public static void playLevel2() {
-        maze = new char[][]{
+        maze = new char[][]{//USED https://www.geeksforgeeks.org/different-ways-to-declare-and-initialize-2-d-array-in-java/
             {'W', 'W', 'W', 'W', 'W', 'W', 'W', 'W', 'W'},
             {'W', 'Y', ' ', ' ', 'W', ' ', 'W', 'D', 'W'},
             {'W', 'W', 'W', ' ', 'W', ' ', 'W', ' ', 'W'},
@@ -52,26 +52,27 @@ public class Maze {
         playerRow = 1;
         playerCol = 1;
 
-        System.out.println("\n Level 2 - THE Big Maze");
+        System.out.println("\n Level 2 -> THE Big Maze");
         runMaze();
     }
 
     // this is so the game can run
-    public static void runMaze() {
-        char currentPosition = maze[playerRow][playerCol];
+    public static void runMaze() {//method 
+        char currentPosition = maze[playerRow][playerCol];//current pos of where you are
         while (currentPosition != 'D') {
-            drawMaze();
-            System.out.print("Move ");
-            String input = reader.nextLine().toUpperCase();
+            drawMaze();//call the draw maze method
+            System.out.print("Move using your keys");
+            String input = reader.nextLine().toUpperCase(); //convergts lowercase letter to upper USED https://www.w3schools.com/jsref/jsref_touppercase.asp
 
-            if (input.length() == 0) continue;
+            if (input.length() == 0)
+                continue; //I knew break pretty well but USED THSI FOR CONTINUE https://www.w3schools.com/java/java_break.asp
 
-            movePlayer(input.charAt(0));
+            movePlayer(input.charAt(0));//RETURNS A CHRARATER AT A INDEX OF STRING USED https://www.w3schools.com/java/ref_string_charat.asp
             currentPosition = maze[playerRow][playerCol];
             
             if (currentPosition == 'D') {
-                drawMaze();
-                System.out.println(" You escaped the maze!\n");
+                drawMaze();//CALL THE DRAW MAZE METHOD
+                System.out.println(" You escaped the maze\n");
             }
         }
     }
@@ -79,9 +80,10 @@ public class Maze {
    // THIS IS TO deaw the maze
     public static void drawMaze() {
         System.out.println();
-        for (int i = 0; i < maze.length; i++) {
-            for (int j = 0; j < maze[i].length; j++) {
-                if (maze[i][j] == 'W') {
+        //NESTED FOR LOOP 
+        for (int X = 0; X < maze.length; X++) {
+            for (int Y = 0; Y < maze[X].length; Y++) {
+                if (maze[X][Y] == 'W') {
                     // to make it loiok nice put edges as `-`, and insides as `|`
                     if (i == 0 || i == maze.length - 1) {
                         System.out.print("- ");
@@ -89,7 +91,7 @@ public class Maze {
                         System.out.print("| ");
                     }
                 } else {
-                    System.out.print(maze[i][j] + " ");
+                    System.out.print(maze[X][Y] + " ");
                 }
             }
             System.out.println();
@@ -130,7 +132,7 @@ public class Maze {
                 return;
             }
 
-            // Move the playetr
+            // Move the playetr while not hiting Doors
             if (maze[playerRow][playerCol] != 'D') {
                 maze[playerRow][playerCol] = ' ';
             }
